@@ -1,0 +1,85 @@
+
+div.main-body {
+  display: grid;
+  grid-template-columns: minmax(200px, auto) 1fr;
+  grid-gap: 20px;
+  grid-template-areas: "navbar mainContent";
+}
+
+
+nav#navbar {
+  grid-area: navbar;
+  position: fixed;
+  font-family: 'Helvetica Rounded LT Std Bold', sans-serif;
+}
+
+nav#navbar a {
+  display: block;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+nav#navbar ul{
+display: block;
+border: 1px solid black;
+list-style: none;
+}
+
+main#main-doc {
+  grid-area: mainContent;
+}
+
+main#main-doc p, ul, ol{
+    font-family: 'Helvetica Rounded LT Std Bold', sans-serif;
+    font-weight: lighter;
+    color: #696969;
+}
+
+main#main-doc h2{
+    font-family: 'Helvetica Rounded LT Std Bold', sans-serif;
+    color: black;
+}
+
+header {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Helvetica Rounded LT Std Bold', sans-serif;
+  background-color: #00b1f0;
+  color: white;
+}
+
+#image{
+    width: 200px;
+}
+
+code {
+  background-color: #ccc;
+  padding: 20px;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  div.main-body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "mainContent";
+   
+
+  }
+    nav#navbar {
+    position: relative;
+  
+  }
+
+
+    
+}
+
+@font-face {
+    font-family: 'Helvetica Rounded LT Std Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Helvetica Rounded LT Std Bold'), url('HelveticaRoundedLTStd-Bd.woff') format('woff');
+    }
